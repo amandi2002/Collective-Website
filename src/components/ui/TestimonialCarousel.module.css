@@ -1,0 +1,174 @@
+.carouselSection {
+    padding: 8rem 0;
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.carouselSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.navBtn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.carouselViewport {
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    padding: 1rem;
+    margin: -1rem;
+}
+
+.carouselTrack {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    padding: 5rem 4rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 400px;
+}
+
+.quoteIconWrap {
+    color: rgba(217, 4, 41, 0.1);
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+}
+
+.quoteText {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: var(--text-main);
+    font-weight: 500;
+    font-style: italic;
+    max-width: 900px;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: auto;
+}
+
+.authorBadge {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 20px -5px rgba(217, 4, 41, 0.4);
+}
+
+.authorName {
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-fast);
+    padding: 0;
+    cursor: pointer;
+    border: none;
+}
+
+.dotActive {
+    background: var(--primary-color);
+    transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .quoteText {
+        font-size: 1.25rem;
+        margin-top: 2rem;
+    }
+
+    .card {
+        padding: 2.5rem 1.5rem;
+        min-height: auto;
+    }
+
+    .quoteIconWrap {
+        top: 1rem;
+        left: 1rem;
+        transform: scale(0.6);
+    }
+}

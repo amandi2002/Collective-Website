@@ -1,0 +1,509 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    perspective: 1000px;
+    transform: scale(0.9);
+    transform-origin: center right;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        transform: scale(0.7);
+        transform-origin: center;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        transform: scale(0.65);
+        transform-origin: center;
+        height: 350px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        transform: scale(0.45);
+        transform-origin: center;
+        height: 280px;
+    }
+}
+
+/* Base properties for dashboard */
+.mainDash {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 80%;
+    height: 450px;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    z-index: 1;
+}
+
+.dashHeader {
+    height: 48px;
+    background: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+}
+
+.dotGroup {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dashMenu {
+    color: white;
+    font-size: 0.85rem;
+    margin-left: 2rem;
+    background: #ef4444;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.dashBody {
+    display: flex;
+    flex: 1;
+}
+
+.dashSidebar {
+    width: 25%;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skeletonLine {
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.dashContent {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.statsRow {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.statBox {
+    flex: 1;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.statLabel {
+    font-size: 0.65rem;
+    color: #64748b;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+
+.statValue {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ef4444;
+    margin-bottom: 12px;
+}
+
+.statBar {
+    height: 6px;
+    background: #f1f5f9;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.statBar div {
+    height: 100%;
+}
+
+.chartArea {
+    flex: 1;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.chartTitle {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.chartMock {
+    flex: 1;
+}
+
+/* Video Widget */
+.videoWidget {
+    position: absolute;
+    top: 0px;
+    right: -5%;
+    width: 45%;
+    background: #1e293b;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.videoMain {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: var(--primary-dark);
+}
+
+.docVideo {
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400&h=300') center/cover;
+}
+
+.videoOverlay {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.videoControls {
+    display: flex;
+    gap: 12px;
+}
+
+.vBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.vBtnRed {
+    background: #ef4444;
+}
+
+.videoThumbs {
+    display: flex;
+    height: 80px;
+}
+
+.vThumb {
+    flex: 1;
+    background: var(--primary-dark);
+    border-right: 1px solid #1e293b;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Schedule Card */
+.scheduleCard {
+    position: absolute;
+    bottom: -20px;
+    right: -10%;
+    width: 60%;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.scheduleHeader {
+    background: var(--primary-color);
+    padding: 1.25rem 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shTime {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.shTitle {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.shSub {
+    font-weight: 400;
+    font-size: 0.85rem;
+    margin-left: 8px;
+    opacity: 0.9;
+}
+
+.shBtn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.scheduleBody {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.sRow {
+    display: flex;
+    font-size: 0.95rem;
+    align-items: center;
+}
+
+.sLabel {
+    width: 160px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.sValue {
+    flex: 1;
+    font-weight: 600;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.joinBtn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.scheduleFooter {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid #f1f5f9;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.actionBtn {
+    background: #e2e8f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+.moreOptions {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Appointment Details Top Left */
+.aptDetailsWidget {
+    position: absolute;
+    bottom: 60px;
+    left: -20%;
+    width: 55%;
+    background: #fff1f2;
+    border-radius: 14px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    z-index: 4;
+    border: 1px solid #fecdd3;
+}
+
+.aptHead {
+    height: 28px;
+    background: var(--primary-color);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dotsGroup {
+    display: flex;
+    gap: 6px;
+}
+
+.wDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+}
+
+.aptBody {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.aptSidebar {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skelBlock {
+    width: 100%;
+    height: 60px;
+    background: #ffe4e6;
+    border-radius: 8px;
+}
+
+.aptContent {
+    flex: 1;
+}
+
+.aptCard {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    padding-left: 2.5rem;
+}
+
+.aptCardTag {
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    background: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}
+
+.acTitle {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.acTime {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.acRow {
+    display: flex;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.acRow span {
+    width: 80px;
+    color: #64748b;
+}
+
+.acRow strong {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.floatAvatar1 {
+    position: absolute;
+    left: -35px;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background: var(--primary-dark);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avUser {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.floatAvatar2 {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    background-size: cover;
+    background-position: center;
+}

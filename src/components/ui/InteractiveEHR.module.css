@@ -1,0 +1,552 @@
+.ehrContainer {
+    background: white;
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 40px 60px -15px rgba(217, 4, 41, 0.1), 0 20px 30px -10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    overflow: hidden;
+    color: #1e293b;
+    aspect-ratio: 16/10;
+    max-height: 550px;
+    width: 100%;
+}
+
+.sidebar {
+    width: 80px;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    z-index: 10;
+}
+
+.logoBox {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(217, 4, 41, 0.3);
+}
+
+.navIcons {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.navIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.navIcon:hover {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.navIcon.active {
+    background: rgba(217, 4, 41, 0.05);
+    color: var(--primary-color);
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.header {
+    height: 72px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 5;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #f1f5f9;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    width: 280px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.search:focus-within {
+    border-color: rgba(217, 4, 41, 0.3);
+    background: white;
+}
+
+.search input {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    color: #0f172a;
+    width: 100%;
+}
+
+.search input::placeholder {
+    color: #94a3b8;
+}
+
+.patientProfile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.patientProfile:hover {
+    background: #f1f5f9;
+}
+
+.patientInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.patientName {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #0f172a;
+}
+
+.patientId {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    font-weight: bold;
+}
+
+.content {
+    padding: 2rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.welcomeBanner {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcomeBanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary-color);
+}
+
+.bannerText h3 {
+    margin: 0 0 0.375rem 0;
+    font-size: 1.25rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.bannerText p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.statusBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid rgba(217, 4, 41, 0.2);
+    box-shadow: 0 2px 4px rgba(217, 4, 41, 0.05);
+}
+
+.vitalsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.vitalCard {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+    cursor: pointer;
+}
+
+.vitalCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(217, 4, 41, 0.1);
+    border-color: rgba(217, 4, 41, 0.2);
+}
+
+.vitalIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    background: rgba(217, 4, 41, 0.05);
+    color: var(--primary-color);
+}
+
+.vitalInfo {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.vitalLabel {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.vitalValue {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.vitalValue span {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-left: 0.25rem;
+}
+
+.vitalChart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.sparkline {
+    width: 100%;
+    height: 100%;
+}
+
+.twoColumnGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.panel {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.panelHeader h4 {
+    margin: 0;
+    font-size: 1.125rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.viewAll {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.viewAll:hover {
+    background: rgba(217, 4, 41, 0.05);
+}
+
+.documentList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.docItem {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.docItem:hover {
+    border-color: rgba(217, 4, 41, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.docIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(217, 4, 41, 0.05);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.docDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.docName {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #0f172a;
+}
+
+.docDate {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+.downloadBtn {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.downloadBtn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.medsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.medItem {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.medItem:hover {
+    border-color: rgba(217, 4, 41, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.medIndicator {
+    width: 4px;
+    height: 28px;
+    border-radius: 4px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    background: var(--primary-color);
+}
+
+.medDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.medName {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #0f172a;
+}
+
+.medDose {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .vitalsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .twoColumnGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 0.5rem 1rem;
+        justify-content: space-between;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .navIcons {
+        flex-direction: row;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    .logoBox,
+    .navIcon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .navIcon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .ehrContainer {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+        aspect-ratio: auto;
+    }
+
+    .header {
+        padding: 0 1rem;
+        height: 60px;
+    }
+
+    .search {
+        width: 150px;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search {
+        display: none;
+    }
+
+    .patientInfo {
+        display: none;
+    }
+
+    .welcomeBanner {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .statusBadge {
+        width: 100%;
+        justify-content: center;
+    }
+}
