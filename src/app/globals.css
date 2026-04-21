@@ -36,7 +36,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-helvetica), "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: var(--background-light);
   color: var(--text-main);
   scroll-behavior: smooth;
@@ -284,20 +284,32 @@ img {
   overflow: hidden;
 }
 
-.page-hero::after {
-  content: '';
+.page-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.page-hero-overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(135deg, rgba(217, 4, 41, 0.1) 0%, transparent 100%);
+  background:
+    linear-gradient(180deg, rgba(8, 12, 24, 0.62) 0%, rgba(8, 12, 24, 0.78) 100%),
+    linear-gradient(135deg, rgba(217, 4, 41, 0.12) 0%, transparent 100%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .page-hero-content {
   position: relative;
-  z-index: 10;
+  z-index: 2;
   max-width: 800px;
 }
 

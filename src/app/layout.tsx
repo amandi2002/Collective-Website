@@ -1,13 +1,39 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700", "800"]
+const helvetica = localFont({
+  src: [
+    {
+      path: "../../Fonts/helvetica-255/helvetica-light-587ebe5a59211.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../Fonts/helvetica-255/Helvetica.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../Fonts/helvetica-255/Helvetica-Oblique.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../Fonts/helvetica-255/Helvetica-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../Fonts/helvetica-255/Helvetica-BoldOblique.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-helvetica",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -30,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className={inter.className}>
+    <html lang="en" className={helvetica.variable}>
+      <body className={helvetica.className}>
         <Navbar />
         <main>{children}</main>
         <Footer />

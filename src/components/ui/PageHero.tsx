@@ -11,6 +11,10 @@ interface PageHeroProps {
 export default function PageHero({ title, description, badge, children }: PageHeroProps) {
     return (
         <section className="page-hero">
+            <video autoPlay muted loop playsInline className="page-hero-video">
+                <source src="/3141211-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+            </video>
+            <div className="page-hero-overlay" />
             <div className="container page-hero-content">
                 <AnimatedSection animation="fade-up">
                     {badge && (

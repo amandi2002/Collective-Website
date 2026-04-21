@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -18,23 +18,13 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: "Home", href: "/" },
         {
-            name: "About",
-            href: "/about",
-            subItems: [
-                { name: "Our Approach", href: "/about/our-approach" },
-                { name: "Our Team", href: "/about/our-team" },
-                { name: "1-1-1 Giving", href: "/about/giving" },
-            ],
-        },
-        {
-            name: "Services",
+            name: "Who We Help",
             href: "/services",
             subItems: [
-                { name: "IT Consulting", href: "/services/it-consulting" },
-                { name: "Revenue Cycle Management", href: "/services/rcm" },
-                { name: "Coding & Audits", href: "/services/coding-audits" },
+                { name: "Providers", href: "/services/rcm" },
+                { name: "Payers", href: "/services/it-consulting" },
+                { name: "Pharmacies", href: "/services/coding-audits" },
             ],
         },
         {
@@ -46,11 +36,30 @@ const Navbar = () => {
                 { name: "CollectivePractice", href: "/products/practice-management" },
             ],
         },
-        { name: "Contact", href: "/contact" },
+        {
+            name: "Our Company",
+            href: "/about",
+            subItems: [
+                { name: "Our Approach", href: "/about/our-approach" },
+                { name: "Our Team", href: "/about/our-team" },
+                { name: "1-1-1 Giving", href: "/about/giving" },
+            ],
+        },
+        { name: "Resources", href: "/about" },
     ];
 
     return (
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+            <div className={styles.topBar}>
+                <div className={`container ${styles.topBarInner}`}>
+                    <p className={styles.topMessage}>Your CMS Proposed Rule Breakdown: Key Takeaways and What to Do Next</p>
+                    <div className={styles.topLinks}>
+                        <Link href="/contact">Support</Link>
+                        <Link href="/about/our-team">Careers</Link>
+                        <Link href="/contact">Contact Us</Link>
+                    </div>
+                </div>
+            </div>
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo}>
                     <img src="/logo_new.webp" alt="Collective RCM" className={styles.logoImage} />
@@ -84,9 +93,9 @@ const Navbar = () => {
                 </nav>
 
                 <div className={styles.actions}>
-                    <Link href="/contact" className="btn btn-primary">
-                        Get a Consultation
-                    </Link>
+                    <button className={styles.searchBtn} aria-label="Search">
+                        <Search size={16} />
+                    </button>
                 </div>
 
                 {/* Mobile Toggle */}

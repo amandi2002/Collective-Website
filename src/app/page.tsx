@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, TrendingUp, BarChart3, Clock, DollarSign, Activity, Users, Shield, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, BarChart3, Clock, DollarSign, Activity, Users, Shield, Zap, Sparkles, BrainCircuit } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ContactForm from "@/components/home/ContactForm";
-import HeroCollage from "@/components/ui/HeroCollage";
 import HeroCarousel from "@/components/ui/HeroCarousel";
 import InfiniteMarquee from "@/components/ui/InfiniteMarquee";
 import InteractiveDashboard from "@/components/ui/InteractiveDashboard";
@@ -22,34 +21,69 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroBg}>
+          <video autoPlay muted loop playsInline className={styles.heroVideo}>
+            <source src="/3141211-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+          </video>
+          <div className={styles.videoOverlay}></div>
           <div className={styles.gridOverlay}></div>
           <div className={styles.orb1}></div>
           <div className={styles.orb2}></div>
           <div className={styles.orb3}></div>
         </div>
-        <div className={`container ${styles.heroContent} `}>
+
+        <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroText}>
             <AnimatedSection animation="fade-right">
-
-              <h1 className="heading-1">
-                Increase revenue and <span className={styles.textHighlight}>cash flow.</span>
+              <h1 className={`heading-1 ${styles.heroHeading}`}>
+                Healthcare Empowered<span className={styles.heroReg}>®</span>
               </h1>
-              <p className="text-body" style={{ color: "rgba(255,255,255,0.8)", marginBottom: "2.5rem", maxWidth: "600px", fontSize: "1.25rem" }}>
-                Track the financial health of your patient, payor, and provider base to identify key concerns and implement best practices.
+              <p className={`text-body ${styles.heroDescription}`}>
+                Enabling the power of data to improve healthcare outcomes and economics
               </p>
-              <div className={styles.heroButtons}>
-                <Link href="/services/rcm" className={`btn btn - primary ${styles.btnLarge} `}>
-                  Learn More <ArrowRight size={18} />
-                </Link>
-                <Link href="/contact" className={`btn btn - white ${styles.btnLarge} `}>
-                  Get Started
-                </Link>
-              </div>
             </AnimatedSection>
           </div>
 
-          <AnimatedSection animation="fade-left" delay={200} className={`${styles.heroSecondaryCard}`}>
-            <HeroCollage />
+        </div>
+
+        {/* Bottom service preview cards (Inovalon-style) */}
+        <div className={styles.heroBottomCards}>
+          <AnimatedSection animation="fade-up" delay={300}>
+            <div className={`container ${styles.heroBottomInner}`}>
+              <div className={styles.heroBottomGrid}>
+                <Link href="/services/rcm" className={styles.heroBottomItem}>
+                  <DollarSign size={22} className={styles.heroBottomIcon} />
+                  <div className={styles.heroBottomText}>
+                    <h4>Revenue Cycle Management</h4>
+                    <p>A high-touch approach to collect more cash, improve operational efficiency, and establish precise visibility.</p>
+                  </div>
+                  <ArrowRight size={18} className={styles.heroBottomArrow} />
+                </Link>
+                <Link href="/services/it-consulting" className={styles.heroBottomItem}>
+                  <Zap size={22} className={styles.heroBottomIcon} />
+                  <div className={styles.heroBottomText}>
+                    <h4>IT Consulting</h4>
+                    <p>Optimize your infrastructure to support high-volume billing efficiently and securely.</p>
+                  </div>
+                  <ArrowRight size={18} className={styles.heroBottomArrow} />
+                </Link>
+                <Link href="/services/coding-audits" className={styles.heroBottomItem}>
+                  <BarChart3 size={22} className={styles.heroBottomIcon} />
+                  <div className={styles.heroBottomText}>
+                    <h4>Coding &amp; Auditing</h4>
+                    <p>Certified coders actively reduce errors, mitigate risks, and keep you fully compliant.</p>
+                  </div>
+                  <ArrowRight size={18} className={styles.heroBottomArrow} />
+                </Link>
+                <Link href="/services/collective-air" className={`${styles.heroBottomItem} ${styles.heroBottomItemAI}`}>
+                  <Sparkles size={22} className={styles.heroBottomIcon} />
+                  <div className={styles.heroBottomText}>
+                    <h4>CollectiveAIR™</h4>
+                    <p>AI-powered Revenue Cycle Management that learns, adapts, and maximizes collections autonomously.</p>
+                  </div>
+                  <ArrowRight size={18} className={styles.heroBottomArrow} />
+                </Link>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -151,9 +185,9 @@ export default function Home() {
           <div className={styles.servicesGrid}>
             <AnimatedSection animation="fade-up" delay={100}>
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}><Activity size={32} /></div>
-                <h3 className="heading-3">Information Technology Consulting</h3>
-                <p className="text-body" style={{ fontSize: "1rem", flex: 1 }}>
+                <div className={styles.serviceIcon}><Activity size={28} /></div>
+                <h3 className={`heading-3 ${styles.serviceTitle}`}>Information Technology Consulting</h3>
+                <p className={`text-body ${styles.serviceDescription}`}>
                   Our consulting team helps you optimize infrastructure to support high-volume billing efficiently and securely.
                 </p>
                 <Link href="/services/it-consulting" className={styles.serviceLink}>
@@ -164,9 +198,9 @@ export default function Home() {
 
             <AnimatedSection animation="fade-up" delay={200}>
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}><DollarSign size={32} /></div>
-                <h3 className="heading-3">Revenue Cycle Management</h3>
-                <p className="text-body" style={{ fontSize: "1rem", flex: 1 }}>
+                <div className={styles.serviceIcon}><DollarSign size={28} /></div>
+                <h3 className={`heading-3 ${styles.serviceTitle}`}>Revenue Cycle Management</h3>
+                <p className={`text-body ${styles.serviceDescription}`}>
                   A high-touch approach to collect more cash, improve operational efficiency, and establish precise visibility.
                 </p>
                 <Link href="/services/rcm" className={styles.serviceLink}>
@@ -177,12 +211,25 @@ export default function Home() {
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}><BarChart3 size={32} /></div>
-                <h3 className="heading-3">Coding & Auditing</h3>
-                <p className="text-body" style={{ fontSize: "1rem", flex: 1 }}>
+                <div className={styles.serviceIcon}><BarChart3 size={28} /></div>
+                <h3 className={`heading-3 ${styles.serviceTitle}`}>Coding & Auditing</h3>
+                <p className={`text-body ${styles.serviceDescription}`}>
                   Trained certified coders actively reduce coding errors, mitigate risks, and help to keep you fully compliant.
                 </p>
                 <Link href="/services/coding-audits" className={styles.serviceLink}>
+                  Learn More <ArrowRight size={16} />
+                </Link>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fade-up" delay={400}>
+              <div className={`${styles.serviceCard} ${styles.serviceCardAI}`}>
+                <div className={styles.serviceIconAI}><Sparkles size={28} /></div>
+                <h3 className={`heading-3 ${styles.serviceTitle}`}>CollectiveAIR™</h3>
+                <p className={`text-body ${styles.serviceDescription}`}>
+                  AI-powered Revenue Cycle Management that autonomously learns your workflows, predicts denials, and maximizes collections.
+                </p>
+                <Link href="/services/collective-air" className={styles.serviceLink}>
                   Learn More <ArrowRight size={16} />
                 </Link>
               </div>
@@ -191,8 +238,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tech Product Section */}
-      <section className={`${styles.productSection} ${styles.bgDark}`}>
+      {/* Tech Product Section — hidden */}
+      <section className={`${styles.productSection} ${styles.bgDark}`} style={{ display: "none" }}>
         <div className={`container ${styles.splitGridRev} `}>
           <div className={styles.splitImageCol}>
             <AnimatedSection animation="fade-right">
@@ -260,6 +307,75 @@ export default function Home() {
               </p>
               <Link href="/products/practice-management" className="btn btn-primary">
                 Demo CollectivePractice <ArrowRight size={16} />
+              </Link>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* CollectiveAIR — AI-Based RCM Section */}
+      <section className={`${styles.productSection} ${styles.bgDark} ${styles.airSection}`}>
+        <div className={`container ${styles.splitGridRev}`}>
+          <div className={styles.splitImageCol}>
+            <AnimatedSection animation="fade-right">
+              <div className={styles.airVisual}>
+                <div className={styles.airGlowBg}></div>
+                <div className={styles.airMetrics}>
+                  <div className={styles.airMetricItem}>
+                    <TrendingUp size={24} />
+                    <span className={styles.airMetricValue}>34%</span>
+                    <span className={styles.airMetricLabel}>Denial Rate Reduction</span>
+                  </div>
+                  <div className={styles.airMetricItem}>
+                    <DollarSign size={24} />
+                    <span className={styles.airMetricValue}>$2.4M</span>
+                    <span className={styles.airMetricLabel}>Avg. Revenue Recovered</span>
+                  </div>
+                  <div className={styles.airMetricItem}>
+                    <Clock size={24} />
+                    <span className={styles.airMetricValue}>72%</span>
+                    <span className={styles.airMetricLabel}>Faster Claim Resolution</span>
+                  </div>
+                  <div className={styles.airMetricItem}>
+                    <Activity size={24} />
+                    <span className={styles.airMetricValue}>99.8%</span>
+                    <span className={styles.airMetricLabel}>Claim Accuracy</span>
+                  </div>
+                </div>
+                <div className={styles.airBadge}>
+                  <Sparkles size={14} />
+                  <span>Powered by Collective AI</span>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+          <div className={styles.splitText}>
+            <AnimatedSection animation="fade-left" delay={200}>
+              <div className={`${styles.badgeSolid} ${styles.badgeAI}`}>AI-Powered Innovation</div>
+              <h2 className="heading-2" style={{ marginBottom: "1.5rem", marginTop: "1.5rem" }}>
+                Introducing <span style={{ color: "var(--text-main)" }}>CollectiveAIR™</span>
+              </h2>
+              <p className="text-body" style={{ marginBottom: "1.5rem" }}>
+                CollectiveAIR is our next-generation AI-based Revenue Cycle Management platform. Trained on millions of claims, it identifies denial patterns before they occur, automates complex billing workflows, and continuously optimizes for your specific payor mix and clinical specialties.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2.5rem" }}>
+                {[
+                  { title: "Predictive Denial Prevention", desc: "AI models catch denial patterns before claim submission, dramatically cutting rejection rates." },
+                  { title: "Autonomous Claim Remediation", desc: "Automatically corrects and resubmits denied claims to accelerate your cash flow." },
+                  { title: "Real-Time Revenue Intelligence", desc: "Continuous learning from your payor mix, specialty, and clinical data for smarter decisions." },
+                  { title: "Natural Language Prior Auth", desc: "AI handles prior authorization requests end-to-end, eliminating manual bottlenecks." },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
+                    <CheckCircle2 size={20} style={{ color: "var(--primary-light)", flexShrink: 0, marginTop: "3px" }} />
+                    <div>
+                      <strong style={{ color: "var(--text-main)", fontSize: "0.9375rem" }}>{item.title}</strong>
+                      <p style={{ margin: "0.2rem 0 0", color: "var(--text-muted)", fontSize: "0.875rem" }}>{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Link href="/services/collective-air" className="btn btn-secondary">
+                Explore CollectiveAIR™ <ArrowRight size={16} />
               </Link>
             </AnimatedSection>
           </div>
