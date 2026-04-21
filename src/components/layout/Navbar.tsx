@@ -133,10 +133,7 @@ const navLinks: NavEntry[] = [
                 {
                     name: "Our Team",
                     href: "/about/our-team",
-                    links: [
-                        { name: "Leadership & Experts", href: "/about/our-team" },
-                        { name: "Careers", href: "/about/our-team" },
-                    ],
+                    links: [{ name: "Leadership & Experts", href: "/about/our-team" }],
                 },
                 {
                     name: "1-1-1 Giving",
@@ -211,7 +208,6 @@ const Navbar = () => {
                     <p className={styles.topMessage}>Your CMS Proposed Rule Breakdown: Key Takeaways and What to Do Next</p>
                     <div className={styles.topLinks}>
                         <Link href="/contact">Support</Link>
-                        <Link href="/about/our-team">Careers</Link>
                         <Link href="/contact">Contact Us</Link>
                     </div>
                 </div>
