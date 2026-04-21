@@ -205,7 +205,9 @@ const Navbar = () => {
         >
             <div className={styles.topBar}>
                 <div className={`container ${styles.topBarInner}`}>
-                    <p className={styles.topMessage}>Your CMS Proposed Rule Breakdown: Key Takeaways and What to Do Next</p>
+                    <p className={styles.topMessage}>
+                        Revenue cycle expertise for healthcare organizations—stronger collections, clearer visibility, and lasting financial performance.
+                    </p>
                     <div className={styles.topLinks}>
                         <Link href="/contact">Support</Link>
                         <Link href="/contact">Contact Us</Link>
