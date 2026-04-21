@@ -1,14 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, TrendingUp, BarChart3, Clock, DollarSign, Activity, Users, Shield, Zap, Sparkles, BrainCircuit } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, BarChart3, Clock, DollarSign, Activity, Shield, Zap, Sparkles } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import ContactForm from "@/components/home/ContactForm";
 import HeroCarousel from "@/components/ui/HeroCarousel";
 import InfiniteMarquee from "@/components/ui/InfiniteMarquee";
 import InteractiveDashboard from "@/components/ui/InteractiveDashboard";
 import InteractiveEHR from "@/components/ui/InteractiveEHR";
 import InteractivePractice from "@/components/ui/InteractivePractice";
-import TestimonialCarousel from "@/components/ui/TestimonialCarousel";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -382,47 +379,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className={styles.contact}>
-        <div className={`container ${styles.contactWrapper} `}>
-          <div className={styles.contactInfo}>
-            <AnimatedSection animation="fade-right">
-              <h2 className="heading-2" style={{ color: "white", marginBottom: "1.5rem" }}>Ready to redefine your financial performance?</h2>
-              <p className="text-body" style={{ color: "rgba(255,255,255,0.8)", marginBottom: "3rem", fontSize: "1.125rem" }}>
-                Start a conversation with our healthcare financial experts today. We build custom solutions designed to scale.
-              </p>
-
-              <div style={{ display: "flex", gap: "2rem", flexDirection: "column" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "1rem", color: "white" }}>
-                  <div style={{ padding: "1rem", background: "rgba(217, 4, 41, 0.4)", borderRadius: "50%" }}>
-                    <Activity size={32} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: "1.25rem", fontWeight: 700 }}>Maximize Revenue</h4>
-                    <p style={{ color: "rgba(255,255,255,0.7)" }}>Collect more cash smoothly.</p>
-                  </div>
-                </div>
-
-                <div style={{ display: "flex", alignItems: "center", gap: "1rem", color: "white" }}>
-                  <div style={{ padding: "1rem", background: "rgba(217, 4, 41, 0.4)", borderRadius: "50%" }}>
-                    <Shield size={32} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: "1.25rem", fontWeight: 700 }}>Ensure Compliance</h4>
-                    <p style={{ color: "rgba(255,255,255,0.7)" }}>Trustworthy auditing protocols.</p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-
-          <div className={styles.contactFormWrapper}>
-            <AnimatedSection animation="fade-up" delay={200}>
-              <ContactForm />
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
