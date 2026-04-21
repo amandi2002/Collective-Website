@@ -175,7 +175,7 @@
   align-items: flex-start;
   z-index: 10;
   position: relative;
-  padding-top: 11.5rem;
+  padding-top: 13rem;
   padding-bottom: 4.25rem;
 }
 
@@ -183,7 +183,7 @@
   .heroContent {
     align-items: center;
     text-align: center;
-    padding-top: 7rem;
+    padding-top: 8rem;
     padding-bottom: 2rem;
   }
 }
