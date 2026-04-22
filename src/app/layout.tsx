@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import "./globals.css";
 
 const helvetica = localFont({
@@ -56,13 +57,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={helvetica.variable}>
+    <html lang="en" className={helvetica.variable} style={{ scrollBehavior: "smooth" }}>
       <body className={helvetica.className}>
         <Navbar />
         <div className="mainContent">
           <main>{children}</main>
         </div>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
