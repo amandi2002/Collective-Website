@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -37,15 +37,33 @@ const Footer = () => {
                         </p>
                         <div className={styles.legalLinks}>
                             <Link href="/terms" className={styles.inlineLink}>Terms of Use</Link>
-                            <span>|</span>
+                            <span className={styles.legalSep} aria-hidden="true">|</span>
                             <Link href="/privacy" className={styles.inlineLink}>Privacy Policy</Link>
-                            <span>|</span>
+                            <span className={styles.legalSep} aria-hidden="true">|</span>
                             <Link href="/cookies" className={styles.inlineLink}>Cookies Settings</Link>
                         </div>
                         <p className={styles.description}>
                             Collective is a premium RCM service provider that focuses on revenue cycle and operational
                             improvements for middle and upper market healthcare systems.
                         </p>
+
+                        <div className={styles.supportBlock}>
+                            <h3 className={styles.heading}>Support</h3>
+                            <ul className={styles.contactList}>
+                                <li className={styles.contactItem}>
+                                    <MapPin size={20} className={styles.contactIcon} />
+                                    <span>2500 Dallas Parkway, Suite #500A<br />Plano, TX 75093</span>
+                                </li>
+                                <li className={styles.contactItem}>
+                                    <Phone size={20} className={styles.contactIcon} />
+                                    <a href="tel:9724680030" className={styles.link}>(972) 468-0030</a>
+                                </li>
+                                <li className={styles.contactItem}>
+                                    <Mail size={20} className={styles.contactIcon} />
+                                    <a href="mailto:info@collectivercm.com" className={styles.link}>info@collectivercm.com</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className={styles.linksArea}>
@@ -61,7 +79,7 @@ const Footer = () => {
                         </div>
 
                         <div className={styles.linksCol}>
-                            <h3 className={styles.heading}>Who We Help</h3>
+                            <h3 className={styles.heading}>How We Help</h3>
                             <ul className={styles.list}>
                                 <li><Link href="/services/it-consulting" className={styles.link}>IT Consulting</Link></li>
                                 <li><Link href="/services/rcm" className={styles.link}>Revenue Cycle Management</Link></li>
@@ -92,35 +110,17 @@ const Footer = () => {
                                 <li><Link href="/services/collective-air/ai-patient-billing-assistant" className={styles.link}>AI Patient Billing Assistant</Link></li>
                             </ul>
                         </div>
-
-                        <div className={styles.linksCol}>
-                            <h3 className={styles.heading}>Support</h3>
-                            <ul className={styles.contactList}>
-                                <li className={styles.contactItem}>
-                                    <MapPin size={18} className={styles.contactIcon} />
-                                    <span>2500 Dallas Parkway, Suite #500A<br />Plano, TX 75093</span>
-                                </li>
-                                <li className={styles.contactItem}>
-                                    <Phone size={18} className={styles.contactIcon} />
-                                    <a href="tel:9724680030" className={styles.link}>(972) 468-0030</a>
-                                </li>
-                                <li className={styles.contactItem}>
-                                    <Mail size={18} className={styles.contactIcon} />
-                                    <a href="mailto:info@collectivercm.com" className={styles.link}>info@collectivercm.com</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
 
                 <div className={styles.bottomBar}>
                     <p className={styles.bottomCopy}>&copy; {new Date().getFullYear()} Collective RCM.</p>
                     <div className={styles.socials}>
-                        <Link href="#" aria-label="Twitter" className={styles.socialLink}><Twitter size={16} /></Link>
-                        <Link href="#" aria-label="Facebook" className={styles.socialLink}><Facebook size={16} /></Link>
-                        <Link href="#" aria-label="LinkedIn" className={styles.socialLink}><Linkedin size={16} /></Link>
-                        <Link href="#" aria-label="YouTube" className={styles.socialLink}><Youtube size={16} /></Link>
-                        <Link href="#" aria-label="Instagram" className={styles.socialLink}><Instagram size={16} /></Link>
+                        <Link href="#" aria-label="Twitter" className={styles.socialLink}><Twitter size={18} /></Link>
+                        <Link href="#" aria-label="Facebook" className={styles.socialLink}><Facebook size={18} /></Link>
+                        <Link href="#" aria-label="LinkedIn" className={styles.socialLink}><Linkedin size={18} /></Link>
+                        <Link href="#" aria-label="YouTube" className={styles.socialLink}><Youtube size={18} /></Link>
+                        <Link href="#" aria-label="Instagram" className={styles.socialLink}><Instagram size={18} /></Link>
                     </div>
                 </div>
             </div>

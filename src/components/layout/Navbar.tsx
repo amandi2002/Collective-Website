@@ -27,10 +27,10 @@ type NavEntry =
 
 const navLinks: NavEntry[] = [
     {
-        name: "Who We Help",
+        name: "How We Help",
         href: "/services",
         mega: {
-            featuredTitle: "Healthcare Empowered®",
+            featuredTitle: "Healthcare Empowered",
             featuredDescription:
                 "Enabling the power of data to improve healthcare outcomes and economics. Tailored support for organizations that need stronger revenue performance and operational clarity.",
             featuredImage: "/img.png",

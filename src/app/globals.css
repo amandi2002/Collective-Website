@@ -121,6 +121,12 @@ img {
   width: 100%;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 /* Base Buttons */
 .btn {
   display: inline-flex;
@@ -289,6 +295,25 @@ img {
   opacity: 0;
 }
 
+/* ── Mobile: collapse 2-col inline grids on product/service pages ── */
+@media (max-width: 768px) {
+  .container > * [style*="grid-template-columns: 1fr 1fr"],
+  .container [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce oversized inline padding inside CTA blocks */
+  .container [style*="padding: 3rem"] {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container [style*="padding: 3rem"] {
+    padding: 1.75rem 1.25rem !important;
+  }
+}
+
 /* Page Hero layout styles shared across pages */
 .page-hero {
   background: var(--secondary-color);
@@ -296,6 +321,18 @@ img {
   padding: 8rem 0 4rem;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 6rem 0 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    padding: 5rem 0 2.5rem;
+  }
 }
 
 .page-hero-video {
@@ -325,8 +362,27 @@ img {
   position: relative;
   z-index: 2;
   max-width: 800px;
+  width: 100%;
 }
 
 .section-padding {
   padding: 6rem 0;
+}
+
+@media (max-width: 1024px) {
+  .section-padding {
+    padding: 4.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-padding {
+    padding: 2.75rem 0;
+  }
 }

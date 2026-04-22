@@ -38,7 +38,7 @@ export default function Home() {
           <div className={styles.heroText}>
             <AnimatedSection animation="fade-right">
               <h1 className={`heading-1 ${styles.heroHeading}`}>
-                Healthcare Empowered<span className={styles.heroReg}>®</span>
+                Healthcare Empowered<span className={styles.heroReg}></span>
               </h1>
               <p className={`text-body ${styles.heroDescription}`}>
                 Enabling the power of data to improve healthcare outcomes and economics
