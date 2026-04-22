@@ -59,7 +59,9 @@ export default function RootLayout({
     <html lang="en" className={helvetica.variable}>
       <body className={helvetica.className}>
         <Navbar />
-        <main>{children}</main>
+        <div className="mainContent">
+          <main>{children}</main>
+        </div>
         <Footer />
       </body>
     </html>

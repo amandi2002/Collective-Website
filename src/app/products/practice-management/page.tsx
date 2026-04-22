@@ -1,8 +1,9 @@
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Link2, LineChart, FileText, Monitor, Server, Briefcase } from "lucide-react";
+import { FileText, Monitor, Briefcase } from "lucide-react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export const metadata = {
     title: "Practice Management Software | Collective RCM",
@@ -29,10 +30,17 @@ export default function PracticeManagementPage() {
                     <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem" }}>
 
                         <AnimatedSection>
-                            <h2 className="heading-2" style={{ marginBottom: "2rem" }}>Forget Expensive Systems</h2>
-                            <p className="text-body" style={{ maxWidth: "800px", marginBottom: "3rem" }}>
-                                Buying and maintaining traditional practice management software is painfully expensive. CollectivePractice changes the industry norm by offering a high-level solution without any of the ongoing maintenance or expensive upgrade costs.
-                            </p>
+                            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3.5rem", alignItems: "center" }}>
+                                <div>
+                                    <h2 className="heading-2" style={{ marginBottom: "1.5rem" }}>Forget Expensive Systems</h2>
+                                    <p className="text-body" style={{ marginBottom: "2rem" }}>
+                                        Buying and maintaining traditional practice management software is painfully expensive. CollectivePractice changes the industry norm by offering a high-level solution without any of the ongoing maintenance or expensive upgrade costs.
+                                    </p>
+                                </div>
+                                <div>
+                                    <Image src="/service/collectiveIQ.png" alt="CollectivePractice" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                                </div>
+                            </div>
                         </AnimatedSection>
 
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>

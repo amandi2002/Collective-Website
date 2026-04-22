@@ -3,6 +3,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Cloud, Smartphone, Zap } from "lucide-react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export const metadata = {
     title: "Electronic Health Records - CollectiveRecords | Collective RCM",
@@ -29,10 +30,17 @@ export default function EHRPage() {
                     <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem" }}>
 
                         <AnimatedSection>
-                            <h2 className="heading-2" style={{ marginBottom: "2rem" }}>Access Medical Records Anytime, Anywhere</h2>
-                            <p className="text-body" style={{ maxWidth: "800px", marginBottom: "3rem" }}>
-                                CollectiveRecords enables your providers to see more patients securely, document interactions easily, and access critical medical records, diagnostic data, and prescriptions right at the point of care.
-                            </p>
+                            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3.5rem", alignItems: "center" }}>
+                                <div>
+                                    <h2 className="heading-2" style={{ marginBottom: "1.5rem" }}>Access Medical Records Anytime, Anywhere</h2>
+                                    <p className="text-body" style={{ marginBottom: "2rem" }}>
+                                        CollectiveRecords enables your providers to see more patients securely, document interactions easily, and access critical medical records, diagnostic data, and prescriptions right at the point of care.
+                                    </p>
+                                </div>
+                                <div>
+                                    <Image src="/service/collectiveIQ.png" alt="CollectiveRecords EHR" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                                </div>
+                            </div>
                         </AnimatedSection>
 
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>

@@ -42,6 +42,20 @@ body {
   scroll-behavior: smooth;
 }
 
+/* ── Footer sticky-behind reveal ─────────────── */
+.mainContent {
+  position: relative;
+  z-index: 2;
+  background-color: var(--background-light);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -301,7 +315,7 @@ img {
   bottom: 0;
   left: 0;
   background:
-    linear-gradient(180deg, rgba(8, 12, 24, 0.62) 0%, rgba(8, 12, 24, 0.78) 100%),
+    linear-gradient(180deg, rgba(8, 12, 24, 0.38) 0%, rgba(8, 12, 24, 0.52) 100%),
     linear-gradient(135deg, rgba(217, 4, 41, 0.12) 0%, transparent 100%);
   pointer-events: none;
   z-index: 1;

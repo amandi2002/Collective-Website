@@ -1,7 +1,7 @@
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Link from "next/link";
-import { ArrowRight, Activity, Server, Target } from "lucide-react";
+import { ArrowRight, Activity, Server, Target, Sparkles } from "lucide-react";
 
 export const metadata = {
     title: "Services | Collective RCM",
@@ -12,6 +12,7 @@ const services = [
     { href: "/services/it-consulting", icon: Server, title: "Information Technology Consulting", desc: "Our consulting team of MBAs, MDs, and CPAs helps clients achieve goals in revenue cycle, coding, and practice performance metrics." },
     { href: "/services/rcm", icon: Activity, title: "Revenue Cycle Management", desc: "Our consultative approach collects more of your money, improves operational efficiency, and delivers visibility into revenue streams." },
     { href: "/services/coding-audits", icon: Target, title: "Coding & Audits", desc: "Certified coders trained on the latest updates handle your coding logic while mitigating your exposure to penalties." },
+    { href: "/services/collective-air", icon: Sparkles, title: "CollectiveAIR™", desc: "Our next-generation AI-based Revenue Cycle Management platform — featuring denial prediction, autonomous claim remediation, AI-powered chatbots, and intelligent workflow automation trained on millions of claims." },
 ];
 
 export default function ServicesPage() {

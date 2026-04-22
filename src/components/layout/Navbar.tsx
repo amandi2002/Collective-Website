@@ -40,7 +40,6 @@ const navLinks: NavEntry[] = [
                     href: "/services/it-consulting",
                     links: [
                         { name: "IT Consulting Overview", href: "/services/it-consulting" },
-                        { name: "Infrastructure & Security", href: "/services/it-consulting" },
                         { name: "Get Started", href: "/contact" },
                     ],
                 },
@@ -49,7 +48,6 @@ const navLinks: NavEntry[] = [
                     href: "/services/rcm",
                     links: [
                         { name: "RCM Overview", href: "/services/rcm" },
-                        { name: "Collections & AR", href: "/services/rcm" },
                         { name: "Schedule a Consultation", href: "/contact" },
                     ],
                 },
@@ -58,17 +56,7 @@ const navLinks: NavEntry[] = [
                     href: "/services/coding-audits",
                     links: [
                         { name: "Coding & Audits Overview", href: "/services/coding-audits" },
-                        { name: "Compliance & Documentation", href: "/services/coding-audits" },
                         { name: "Contact Us", href: "/contact" },
-                    ],
-                },
-                {
-                    name: "CollectiveAIR™",
-                    href: "/services/collective-air",
-                    links: [
-                        { name: "CollectiveAIR Overview", href: "/services/collective-air" },
-                        { name: "AI-Powered RCM", href: "/services/collective-air" },
-                        { name: "Explore CollectiveAIR™", href: "/services/collective-air" },
                     ],
                 },
             ],
@@ -80,15 +68,28 @@ const navLinks: NavEntry[] = [
         mega: {
             featuredTitle: "Software Built for Healthcare",
             featuredDescription:
-                "Analytics, EHR, and practice management tools that connect your clinical and financial workflows in one ecosystem.",
+                "Analytics, EHR, practice management, and AI-powered revenue cycle tools that connect your clinical and financial workflows in one ecosystem.",
             featuredImage: "/pexels-tiger-lily-7109205.jpg",
             categories: [
+                {
+                    name: "CollectiveAIR™",
+                    href: "/services/collective-air",
+                    links: [
+                        { name: "CollectiveAIR Overview", href: "/services/collective-air" },
+                        { name: "Denial Management Chatbot", href: "/services/collective-air/denial-management-chatbot" },
+                        { name: "AI Claims Scrubber", href: "/services/collective-air/ai-claims-scrubber" },
+                        { name: "Denial Prediction + Auto-Appeal Agent", href: "/services/collective-air/denial-prediction-auto-appeal" },
+                        { name: "AI AR Follow-Up Agent", href: "/services/collective-air/ai-ar-followup-agent" },
+                        { name: "Intelligent Work Queue Prioritization", href: "/services/collective-air/intelligent-work-queue" },
+                        { name: "AI Patient Billing Assistant", href: "/services/collective-air/ai-patient-billing-assistant" },
+                    ],
+                },
                 {
                     name: "CollectiveIQ",
                     href: "/products/analytics",
                     links: [
                         { name: "Analytics Overview", href: "/products/analytics" },
-                        { name: "Reporting & Dashboards", href: "/products/analytics" },
+                        { name: "IDR Analytics Dashboard", href: "/products/analytics#iq-modules" },
                         { name: "Request a Demo", href: "/contact" },
                     ],
                 },
@@ -97,8 +98,6 @@ const navLinks: NavEntry[] = [
                     href: "/products/ehr",
                     links: [
                         { name: "EHR Overview", href: "/products/ehr" },
-                        { name: "Cloud Access", href: "/products/ehr" },
-                        { name: "Learn More", href: "/products/ehr" },
                     ],
                 },
                 {
@@ -106,7 +105,6 @@ const navLinks: NavEntry[] = [
                     href: "/products/practice-management",
                     links: [
                         { name: "Practice Management Overview", href: "/products/practice-management" },
-                        { name: "Scheduling & Eligibility", href: "/products/practice-management" },
                         { name: "Demo CollectivePractice", href: "/contact" },
                     ],
                 },
@@ -127,7 +125,6 @@ const navLinks: NavEntry[] = [
                     href: "/about/our-approach",
                     links: [
                         { name: "Methodology", href: "/about/our-approach" },
-                        { name: "Why Collective", href: "/about/our-approach" },
                     ],
                 },
                 {
@@ -168,7 +165,6 @@ const navLinks: NavEntry[] = [
                     href: "/contact",
                     links: [
                         { name: "Contact Us", href: "/contact" },
-                        { name: "Support", href: "/contact" },
                     ],
                 },
             ],

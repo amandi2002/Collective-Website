@@ -941,100 +941,183 @@
 .airSection {
   position: relative;
   overflow: hidden;
+  color: white;
 }
 
 .airSection::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 55%;
-  height: 100%;
-  background: radial-gradient(circle at 75% 50%, rgba(217, 4, 41, 0.09) 0%, transparent 65%);
+  inset: 0;
+  background: radial-gradient(circle at 70% 45%, rgba(217, 4, 41, 0.2) 0%, rgba(217, 4, 41, 0) 52%);
   pointer-events: none;
   z-index: 1;
 }
 
+.airBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.airVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+}
+
+.airVideoOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(100deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.62) 38%, rgba(0, 0, 0, 0.42) 70%, rgba(0, 0, 0, 0.28) 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.52) 100%);
+}
+
+.airLayout {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 1100px) {
+  .airLayout {
+    grid-template-columns: 0.95fr 1.35fr;
+    gap: 2.8rem;
+  }
+}
+
+.airIntro {
+  position: relative;
+}
+
+.airBoxes {
+  position: relative;
+}
+
+.airBoxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .airBoxGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.airBoxCard {
+  min-height: 140px;
+  padding: 1.15rem 1.1rem;
+  border-radius: 0.85rem;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(145deg, rgba(217, 4, 41, 0.62) 0%, rgba(148, 0, 28, 0.74) 100%);
+  border: 1px solid rgba(255, 177, 190, 0.4);
+  box-shadow: 0 14px 32px rgba(50, 4, 14, 0.38);
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  justify-content: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.airBoxCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 219, 225, 0.9);
+  box-shadow: 0 18px 36px rgba(50, 4, 14, 0.46);
+}
+
+.airBoxCard h3 {
+  font-size: 1.03rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.airBoxIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.airBoxCard:nth-child(odd) {
+  background: linear-gradient(145deg, rgba(223, 26, 61, 0.64) 0%, rgba(161, 0, 34, 0.76) 100%);
+}
+
+.airBoxCard:nth-child(even) {
+  background: linear-gradient(145deg, rgba(208, 12, 47, 0.64) 0%, rgba(144, 0, 28, 0.76) 100%);
+}
+
+.airBoxCard:nth-child(3n) {
+  background: linear-gradient(145deg, rgba(191, 8, 40, 0.64) 0%, rgba(126, 0, 24, 0.76) 100%);
+}
+
+.airBoxCard:nth-child(4n) {
+  background: linear-gradient(145deg, rgba(235, 43, 78, 0.64) 0%, rgba(172, 0, 38, 0.76) 100%);
+}
+
+.airSection .badgeAI {
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(8px);
+}
+
+.airSection .btn.btn-secondary {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: white;
+}
+
+.airSection .btn.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.airSection .text-body {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+/* legacy styles kept for compatibility */
 .airVisual {
   position: relative;
-  padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
 }
 
 .airGlowBg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(217, 4, 41, 0.18) 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 0;
+  inset: 0;
 }
 
 .airMetrics {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 1.75rem;
 }
 
 .airMetricItem {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-  padding: 1.375rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  color: var(--text-main);
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.airMetricItem:hover {
-  background: rgba(217, 4, 41, 0.1);
-  border-color: rgba(217, 4, 41, 0.3);
-}
-
-.airMetricItem svg {
-  color: var(--primary-light);
+  display: block;
 }
 
 .airMetricValue {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--text-main);
-  line-height: 1;
+  font-size: 1rem;
 }
 
 .airMetricLabel {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  line-height: 1.3;
+  font-size: 0.85rem;
 }
 
 .airBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(217, 4, 41, 0.2);
-  border: 1px solid rgba(217, 4, 41, 0.45);
-  color: var(--primary-light);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  font-size: 0.875rem;
-  font-weight: 600;
-  position: relative;
-  z-index: 2;
+  display: none;
 }
 
 .badgeAI {
