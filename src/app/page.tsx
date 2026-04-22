@@ -29,7 +29,6 @@ export default function Home() {
             <source src="/3141211-uhd_3840_2160_25fps.mp4" type="video/mp4" />
           </video>
           <div className={styles.videoOverlay}></div>
-          <div className={styles.gridOverlay}></div>
           <div className={styles.orb1}></div>
           <div className={styles.orb2}></div>
           <div className={styles.orb3}></div>
