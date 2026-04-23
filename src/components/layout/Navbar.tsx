@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, Search, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 type MegaLink = { name: string; href: string };
@@ -72,10 +72,10 @@ const navLinks: NavEntry[] = [
             featuredImage: "/pexels-tiger-lily-7109205.jpg",
             categories: [
                 {
-                    name: "CollectiveAIR™",
+                    name: "CollectiveAI™",
                     href: "/services/collective-air",
                     links: [
-                        { name: "CollectiveAIR Overview", href: "/services/collective-air" },
+                        { name: "CollectiveAI Overview", href: "/services/collective-air" },
                         { name: "Denial Management Chatbot", href: "/services/collective-air/denial-management-chatbot" },
                         { name: "AI Claims Scrubber", href: "/services/collective-air/ai-claims-scrubber" },
                         { name: "Denial Prediction + Auto-Appeal Agent", href: "/services/collective-air/denial-prediction-auto-appeal" },
@@ -234,12 +234,6 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </nav>
-
-                <div className={styles.actions}>
-                    <button className={styles.searchBtn} aria-label="Search">
-                        <Search size={16} />
-                    </button>
-                </div>
 
                 <button
                     className={styles.mobileToggle}

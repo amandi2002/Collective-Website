@@ -5,7 +5,7 @@ import { ArrowRight, ShieldCheck, AlertTriangle, Code2, BookOpen, CheckCircle2, 
 import Image from "next/image";
 
 export const metadata = {
-  title: "AI Claims Scrubber | CollectiveAIR™",
+  title: "AI Claims Scrubber | CollectiveAI™",
   description:
     "Pre-submission intelligence that automatically detects coding errors, missing modifiers, and payer-specific rule violations before claims leave your system.",
 };
@@ -55,7 +55,7 @@ export default function AIClaimsScrubberPage() {
       <PageHero
         title="AI Claims Scrubber"
         description="Pre-submission intelligence that catches every error, modifier gap, and payer-specific rule violation before your claims leave the building."
-        badge="CollectiveAIR™"
+        badge="CollectiveAI™"
       />
 
       <section className="section-padding">
@@ -72,7 +72,7 @@ export default function AIClaimsScrubberPage() {
                 </p>
               </div>
               <div>
-                <Image src="/service/collectiveIQ.png" alt="AI Claims Scrubber" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                <Image src={`/collectivewebite/${encodeURIComponent("ai claims scrubber.png")}`} alt="AI Claims Scrubber" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </AnimatedSection>
@@ -102,6 +102,30 @@ export default function AIClaimsScrubberPage() {
             ))}
           </div>
 
+          <AnimatedSection animation="fade-up" delay={220}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Who benefits first</h3>
+                <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
+                  High-volume professional and facility billing teams where small edit errors create large denial waves—especially multi-specialty groups and hospitals with payer-specific complexity.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.4rem" }}>Billing leaders who want fewer “surprise” denials on clean-looking claims.</li>
+                  <li style={{ marginBottom: "0.4rem" }}>Coding teams supporting billers with modifier and bundling edge cases.</li>
+                  <li>Revenue integrity teams standardizing edits before submission.</li>
+                </ul>
+              </div>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>How rollout typically works</h3>
+                <ol style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Connect</strong> — map claim sources, clearinghouse routes, and payer lists.</li>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Calibrate</strong> — tune payer packs, specialty edits, and exception thresholds.</li>
+                  <li><strong style={{ color: "var(--secondary-color)" }}>Operate</strong> — enable in-line fixes, audit logs, and reporting for continuous improvement.</li>
+                </ol>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <AnimatedSection animation="zoom-in" delay={300}>
             <div style={{ borderRadius: "1rem", background: "linear-gradient(135deg, var(--secondary-color), #101625)", color: "white", padding: "3rem", textAlign: "center" }}>
               <h2 className="heading-2" style={{ marginBottom: "1rem" }}>Ready to stop leaving money on the table?</h2>
@@ -113,7 +137,7 @@ export default function AIClaimsScrubberPage() {
                   Request a Demo <ArrowRight size={16} />
                 </Link>
                 <Link href="/services/collective-air" className="btn" style={{ padding: "0.9rem 1.5rem", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.3)" }}>
-                  Back to CollectiveAIR™
+                  Back to CollectiveAI™
                 </Link>
               </div>
             </div>

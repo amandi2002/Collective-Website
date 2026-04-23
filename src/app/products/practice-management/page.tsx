@@ -7,8 +7,15 @@ import Image from "next/image";
 
 export const metadata = {
     title: "Practice Management Software | Collective RCM",
-    description: "Cloud-based practice management and scheduling software designed for physician groups without maintenance costs.",
+    description:
+        "Cloud practice management and scheduling for physician groups: eligibility, charge entry, claims tracking, and collections visibility without expensive on-prem maintenance.",
 };
+
+const operations = [
+    { title: "Front desk throughput", body: "Streamlined scheduling and registration workflows reduce bottlenecks at check-in while keeping patient information consistent across locations." },
+    { title: "Revenue integrity at the source", body: "Eligibility and charge entry discipline improves downstream billing performance—fewer preventable denials and less rework for your billing team." },
+    { title: "Visibility for leadership", body: "Claims tracking, payment posting, and collections signals in one place so operations and finance can respond to variance quickly." },
+];
 
 const features = [
     { icon: Monitor, title: "Patient Scheduling", desc: "Easily register and schedule patients with real-time sync across connected locations." },
@@ -38,7 +45,7 @@ export default function PracticeManagementPage() {
                                     </p>
                                 </div>
                                 <div>
-                                    <Image src="/service/collectiveIQ.png" alt="CollectivePractice" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                                    <Image src="/collectivewebite/CollectivePractice.png" alt="CollectivePractice product interface" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
                                 </div>
                             </div>
                         </AnimatedSection>
@@ -57,10 +64,45 @@ export default function PracticeManagementPage() {
                             ))}
                         </div>
 
+                        <AnimatedSection animation="fade-up" delay={220}>
+                            <h2 className="heading-2" style={{ marginBottom: "1rem" }}>Operations software that pays for itself in discipline</h2>
+                            <p className="text-body" style={{ maxWidth: "800px", marginBottom: "1.75rem" }}>
+                                CollectivePractice is built for organizations that want enterprise-grade scheduling and billing operations without enterprise-grade IT overhead. The value shows up in fewer missed charges, cleaner handoffs to billing, and a steadier rhythm across sites.
+                            </p>
+                            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.25rem" }}>
+                                {operations.map((o) => (
+                                    <div key={o.title} style={{ padding: "1.5rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "#fff" }}>
+                                        <h3 style={{ fontSize: "1.05rem", fontWeight: 700, margin: "0 0 0.5rem", color: "var(--secondary-color)" }}>{o.title}</h3>
+                                        <p className="text-body" style={{ fontSize: "0.95rem", margin: 0 }}>{o.body}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection animation="fade-up" delay={280}>
+                            <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white", maxWidth: "820px" }}>
+                                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Extend into analytics and AI when you are ready</h3>
+                                <p className="text-body" style={{ fontSize: "1rem", margin: 0 }}>
+                                    As volumes grow, pair CollectivePractice with{" "}
+                                    <Link href="/products/analytics" style={{ color: "var(--primary-color)", fontWeight: 600, textDecoration: "underline" }}>
+                                        CollectiveIQ Analytics
+                                    </Link>{" "}
+                                    for deeper operational insight—or explore{" "}
+                                    <Link href="/services/collective-air" style={{ color: "var(--primary-color)", fontWeight: 600, textDecoration: "underline" }}>
+                                        CollectiveAI™
+                                    </Link>{" "}
+                                    for intelligent automation layered on top of disciplined workflows.
+                                </p>
+                            </div>
+                        </AnimatedSection>
+
                         <AnimatedSection animation="zoom-in" delay={400}>
-                            <div style={{ marginTop: "4rem", display: "flex", gap: "1rem", justifyContent: "center" }}>
+                            <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
+                                <p className="text-body" style={{ maxWidth: "560px", margin: 0, textAlign: "center" }}>
+                                    Tell us about your locations, specialties, and current PM challenges—we will tailor a demo around the workflows that matter most.
+                                </p>
                                 <Link href="/contact" className="btn btn-primary" style={{ padding: "1rem 2rem", fontSize: "1.125rem" }}>
-                                    Demo the Platform <ArrowRight size={18} />
+                                    Demo the platform <ArrowRight size={18} />
                                 </Link>
                             </div>
                         </AnimatedSection>

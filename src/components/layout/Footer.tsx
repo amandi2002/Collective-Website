@@ -84,7 +84,7 @@ const Footer = () => {
                                 <li><Link href="/services/it-consulting" className={styles.link}>IT Consulting</Link></li>
                                 <li><Link href="/services/rcm" className={styles.link}>Revenue Cycle Management</Link></li>
                                 <li><Link href="/services/coding-audits" className={styles.link}>Coding & Audits</Link></li>
-                                <li><Link href="/services/collective-air" className={styles.link}>CollectiveAIR™</Link></li>
+                                <li><Link href="/services/collective-air" className={styles.link}>CollectiveAI™</Link></li>
                                 <li><Link href="/products" className={styles.link}>Products Overview</Link></li>
                             </ul>
                         </div>
@@ -100,7 +100,7 @@ const Footer = () => {
                         </div>
 
                         <div className={styles.linksCol}>
-                            <h3 className={styles.heading}>AIR Products</h3>
+                            <h3 className={styles.heading}>CollectiveAI Products</h3>
                             <ul className={styles.list}>
                                 <li><Link href="/services/collective-air/denial-management-chatbot" className={styles.link}>Denial Management Chatbot</Link></li>
                                 <li><Link href="/services/collective-air/ai-claims-scrubber" className={styles.link}>AI Claims Scrubber</Link></li>

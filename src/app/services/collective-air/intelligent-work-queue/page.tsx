@@ -5,7 +5,7 @@ import { ArrowRight, ListTodo, Target, Users, Clock, TrendingUp, LayoutDashboard
 import Image from "next/image";
 
 export const metadata = {
-  title: "Intelligent Work Queue Prioritization | CollectiveAIR™",
+  title: "Intelligent Work Queue Prioritization | CollectiveAI™",
   description:
     "AI-driven workflow engine that ranks and routes billing tasks by revenue impact, payer urgency, and deadline proximity so your team always works the highest-value items first.",
 };
@@ -55,7 +55,7 @@ export default function IntelligentWorkQueuePage() {
       <PageHero
         title="Intelligent Work Queue Prioritization"
         description="AI that makes sure your billing team is always working the right account at the right time — ranked by revenue impact, deadline urgency, and recovery probability."
-        badge="CollectiveAIR™"
+        badge="CollectiveAI™"
       />
 
       <section className="section-padding">
@@ -72,7 +72,7 @@ export default function IntelligentWorkQueuePage() {
                 </p>
               </div>
               <div>
-                <Image src="/service/collectiveIQ.png" alt="Intelligent Work Queue Prioritization" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                <Image src="/collectivewebite/CollectiveIQ.png" alt="Intelligent Work Queue Prioritization" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </AnimatedSection>
@@ -102,6 +102,30 @@ export default function IntelligentWorkQueuePage() {
             ))}
           </div>
 
+          <AnimatedSection animation="fade-up" delay={220}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>When prioritization matters most</h3>
+                <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
+                  Best for teams juggling deadlines, high account volume, and constant interruptions—where “first come, first served” quietly burns revenue.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.4rem" }}>Rank work by revenue impact, deadline risk, and payer behavior—not inbox order.</li>
+                  <li style={{ marginBottom: "0.4rem" }}>Route tasks to the right skill level with clear context attached.</li>
+                  <li>Leadership visibility into throughput, bottlenecks, and rework drivers.</li>
+                </ul>
+              </div>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Rollout in practice</h3>
+                <ol style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Baseline</strong> — map queues, SLAs, and current assignment logic.</li>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Tune</strong> — calibrate scoring weights with managers and compliance.</li>
+                  <li><strong style={{ color: "var(--secondary-color)" }}>Refine</strong> — weekly iteration until the queue matches how your best performers work.</li>
+                </ol>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <AnimatedSection animation="zoom-in" delay={300}>
             <div style={{ borderRadius: "1rem", background: "linear-gradient(135deg, var(--secondary-color), #101625)", color: "white", padding: "3rem", textAlign: "center" }}>
               <h2 className="heading-2" style={{ marginBottom: "1rem" }}>Let AI direct your team's effort</h2>
@@ -113,7 +137,7 @@ export default function IntelligentWorkQueuePage() {
                   Request a Demo <ArrowRight size={16} />
                 </Link>
                 <Link href="/services/collective-air" className="btn" style={{ padding: "0.9rem 1.5rem", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.3)" }}>
-                  Back to CollectiveAIR™
+                  Back to CollectiveAI™
                 </Link>
               </div>
             </div>

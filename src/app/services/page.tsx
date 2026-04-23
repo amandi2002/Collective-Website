@@ -5,14 +5,15 @@ import { ArrowRight, Activity, Server, Target, Sparkles } from "lucide-react";
 
 export const metadata = {
     title: "Services | Collective RCM",
-    description: "Comprehensive solutions tailored for middle and upper market healthcare systems.",
+    description:
+        "RCM, IT consulting, coding and audits, and CollectiveAI™—premium services for middle- and upper-market healthcare organizations focused on cash flow and operational clarity.",
 };
 
 const services = [
     { href: "/services/it-consulting", icon: Server, title: "Information Technology Consulting", desc: "Our consulting team of MBAs, MDs, and CPAs helps clients achieve goals in revenue cycle, coding, and practice performance metrics." },
     { href: "/services/rcm", icon: Activity, title: "Revenue Cycle Management", desc: "Our consultative approach collects more of your money, improves operational efficiency, and delivers visibility into revenue streams." },
     { href: "/services/coding-audits", icon: Target, title: "Coding & Audits", desc: "Certified coders trained on the latest updates handle your coding logic while mitigating your exposure to penalties." },
-    { href: "/services/collective-air", icon: Sparkles, title: "CollectiveAIR™", desc: "Our next-generation AI-based Revenue Cycle Management platform — featuring denial prediction, autonomous claim remediation, AI-powered chatbots, and intelligent workflow automation trained on millions of claims." },
+    { href: "/services/collective-air", icon: Sparkles, title: "CollectiveAI™", desc: "Our next-generation AI-based Revenue Cycle Management platform — featuring denial prediction, autonomous claim remediation, AI-powered chatbots, and intelligent workflow automation trained on millions of claims." },
 ];
 
 export default function ServicesPage() {
@@ -25,7 +26,18 @@ export default function ServicesPage() {
 
             <section className="section-padding">
                 <div className="container">
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2rem" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem" }}>
+                        <AnimatedSection animation="fade-up">
+                            <h2 className="heading-2" style={{ marginBottom: "1rem" }}>Built for complex healthcare operations</h2>
+                            <div style={{ display: "grid", gap: "1rem", maxWidth: "820px" }}>
+                                <p className="text-body" style={{ margin: 0 }}>
+                                    Middle- and upper-market providers face a different class of problem: multi-site variance, specialty nuance, payer aggression, and systems that were never designed to produce finance-grade truth. Our services are structured to connect strategy, technology, and day-to-day revenue execution.
+                                </p>
+                                <p className="text-body" style={{ margin: 0 }}>
+                                    Choose a lane below—consulting, managed RCM, coding integrity, or AI-powered automation—or combine them so recommendations translate into measurable cash performance.
+                                </p>
+                            </div>
+                        </AnimatedSection>
                         {services.map((s, i) => (
                             <AnimatedSection key={i} animation="fade-up" delay={i * 100}>
                                 <Link href={s.href} style={{ textDecoration: "none", display: "block" }}>

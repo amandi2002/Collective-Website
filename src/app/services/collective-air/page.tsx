@@ -2,10 +2,10 @@ import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Sparkles, TrendingUp, DollarSign, Clock, Activity, CheckCircle2, MessageSquareText, ShieldCheck, Zap, Users, ListTodo, CreditCard } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp, DollarSign, Clock, Activity, CheckCircle2, MessageSquareText, ShieldCheck, Zap, ListTodo, CreditCard } from "lucide-react";
 
 export const metadata = {
-  title: "CollectiveAIR | Collective RCM",
+  title: "CollectiveAI | Collective RCM",
   description:
     "AI-powered Revenue Cycle Management that predicts denials, automates remediation, and maximizes collections.",
 };
@@ -75,11 +75,11 @@ const airProducts = [
   },
 ];
 
-export default function CollectiveAIRPage() {
+export default function CollectiveAIPage() {
   return (
     <main>
       <PageHero
-        title="CollectiveAIR™"
+        title="CollectiveAI™"
         description="Our next-generation AI-based Revenue Cycle Management platform trained on millions of claims."
         badge="AI-Powered Innovation"
       />
@@ -93,12 +93,12 @@ export default function CollectiveAIRPage() {
                   Intelligent Revenue Cycle Performance
                 </h2>
                 <p className="text-body">
-                  CollectiveAIR identifies denial patterns before they occur, automates complex billing workflows, and
+                  CollectiveAI identifies denial patterns before they occur, automates complex billing workflows, and
                   continuously adapts to your payor mix and specialty-specific billing trends.
                 </p>
               </div>
               <div>
-                <Image src="/service/collectiveIQ.png" alt="CollectiveAIR Platform" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                <Image src="/collectivewebite/CollectiveIQ.png" alt="CollectiveAI platform and analytics" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </AnimatedSection>
@@ -154,9 +154,9 @@ export default function CollectiveAIRPage() {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={250}>
-            <div id="air-products">
+            <div id="collective-ai-products">
               <h3 className="heading-3" style={{ marginBottom: "0.5rem", fontSize: "1.5rem" }}>
-                AIR Product Suite
+                CollectiveAI Product Suite
               </h3>
               <p className="text-body" style={{ maxWidth: "720px", marginBottom: "2rem" }}>
                 Modular AI-powered tools that plug into your existing RCM workflows — each purpose-built to eliminate a specific revenue leak.
@@ -211,6 +211,35 @@ export default function CollectiveAIRPage() {
             </div>
           </AnimatedSection>
 
+          <AnimatedSection animation="fade-up" delay={260}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.35rem", marginBottom: "1rem" }}>Designed for production RCM</h3>
+                <p className="text-body" style={{ fontSize: "1rem", marginBottom: "1rem" }}>
+                  CollectiveAI is built to sit beside your billing team—not replace governance. Models are tuned for healthcare claim and remittance behavior, with human escalation paths when policy judgment matters.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.15rem", color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.5rem" }}>Modular agents: deploy one workflow, prove ROI, then expand.</li>
+                  <li style={{ marginBottom: "0.5rem" }}>Audit-friendly logging for corrections, appeals, and automated outreach.</li>
+                  <li>Integration-first posture with clearinghouse, EHR, and PM data flows.</li>
+                </ul>
+              </div>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.35rem", marginBottom: "1rem" }}>Best results alongside disciplined operations</h3>
+                <p className="text-body" style={{ fontSize: "1rem", marginBottom: "1rem" }}>
+                  AI accelerates what is already working—and exposes what is not. Organizations get the fastest lift when workflows, ownership, and KPI definitions are aligned before automation scales.
+                </p>
+                <p className="text-body" style={{ fontSize: "1rem", margin: 0 }}>
+                  Pair CollectiveAI with{" "}
+                  <Link href="/services/rcm" style={{ color: "var(--primary-color)", fontWeight: 600, textDecoration: "underline" }}>
+                    Collective RCM services
+                  </Link>{" "}
+                  when you want end-to-end execution with the same leadership team accountable for outcomes.
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <AnimatedSection animation="zoom-in" delay={300}>
             <div
               style={{
@@ -228,10 +257,10 @@ export default function CollectiveAIRPage() {
                 Ready to transform your cash flow?
               </h2>
               <p className="text-body" style={{ color: "rgba(255,255,255,0.85)", maxWidth: "680px", margin: "0 auto 1.75rem" }}>
-                See how CollectiveAIR can predict denials, automate remediation, and improve collections for your organization.
+                Walk through your denial profile, AR aging, and workflow bottlenecks—and we will recommend which CollectiveAI modules to pilot first.
               </p>
               <Link href="/contact" className="btn btn-primary" style={{ padding: "0.9rem 1.5rem" }}>
-                Explore CollectiveAIR™ <ArrowRight size={16} />
+                Explore CollectiveAI™ <ArrowRight size={16} />
               </Link>
             </div>
           </AnimatedSection>

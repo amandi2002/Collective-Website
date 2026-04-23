@@ -5,7 +5,7 @@ import { ArrowRight, MessageSquareText, Search, FileText, RefreshCcw, BarChart2,
 import Image from "next/image";
 
 export const metadata = {
-  title: "Denial Management Chatbot | CollectiveAIR™",
+  title: "Denial Management Chatbot | CollectiveAI™",
   description:
     "AI-powered conversational assistant that guides billing staff through denial research, response drafting, and appeal workflows.",
 };
@@ -55,7 +55,7 @@ export default function DenialManagementChatbotPage() {
       <PageHero
         title="Denial Management Chatbot"
         description="A conversational AI assistant that guides your billing team through every denial — from research to resolution — in seconds, not hours."
-        badge="CollectiveAIR™"
+        badge="CollectiveAI™"
       />
 
       <section className="section-padding">
@@ -72,7 +72,7 @@ export default function DenialManagementChatbotPage() {
                 </p>
               </div>
               <div>
-                <Image src="/service/collectiveIQ.png" alt="Denial Management Chatbot" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                <Image src={`/collectivewebite/${encodeURIComponent("denial management chatbot.png")}`} alt="Denial Management Chatbot" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </AnimatedSection>
@@ -102,6 +102,30 @@ export default function DenialManagementChatbotPage() {
             ))}
           </div>
 
+          <AnimatedSection animation="fade-up" delay={220}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Built for billing teams under pressure</h3>
+                <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
+                  Ideal when denial volume is rising, payer policies are hard to keep current, and staff time is consumed by research instead of working accounts.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.4rem" }}>Plain-language answers grounded in your denial context and payer rules.</li>
+                  <li style={{ marginBottom: "0.4rem" }}>Appeal drafts and documentation checklists your team can edit and submit.</li>
+                  <li>Trend visibility so leadership sees recurring denial themes—not only one-off tickets.</li>
+                </ul>
+              </div>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Adoption path</h3>
+                <ol style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Embed</strong> — connect to the workflow surfaces staff already use.</li>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Coach</strong> — short training on prompts, verification habits, and quality checks.</li>
+                  <li><strong style={{ color: "var(--secondary-color)" }}>Measure</strong> — track time-to-resolution and overturn rates by denial category.</li>
+                </ol>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <AnimatedSection animation="zoom-in" delay={300}>
             <div style={{ borderRadius: "1rem", background: "linear-gradient(135deg, var(--secondary-color), #101625)", color: "white", padding: "3rem", textAlign: "center" }}>
               <h2 className="heading-2" style={{ marginBottom: "1rem" }}>See it in action</h2>
@@ -113,7 +137,7 @@ export default function DenialManagementChatbotPage() {
                   Request a Demo <ArrowRight size={16} />
                 </Link>
                 <Link href="/services/collective-air" className="btn" style={{ padding: "0.9rem 1.5rem", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.3)" }}>
-                  Back to CollectiveAIR™
+                  Back to CollectiveAI™
                 </Link>
               </div>
             </div>

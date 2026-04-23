@@ -5,7 +5,7 @@ import { ArrowRight, Activity, Clock, PhoneCall, BarChart2, AlertCircle, CheckCi
 import Image from "next/image";
 
 export const metadata = {
-  title: "AI AR Follow-Up Agent | CollectiveAIR™",
+  title: "AI AR Follow-Up Agent | CollectiveAI™",
   description:
     "An autonomous collections bot that prioritizes aged AR, contacts payers via automated outreach, and escalates high-value accounts — keeping cash flowing without adding headcount.",
 };
@@ -55,7 +55,7 @@ export default function AIARFollowUpAgentPage() {
       <PageHero
         title="AI AR Follow-Up Agent"
         description="An autonomous collections bot that works your aged AR around the clock — prioritizing accounts, contacting payers, and escalating what needs human eyes."
-        badge="CollectiveAIR™"
+        badge="CollectiveAI™"
       />
 
       <section className="section-padding">
@@ -72,7 +72,7 @@ export default function AIARFollowUpAgentPage() {
                 </p>
               </div>
               <div>
-                <Image src="/service/collectiveIQ.png" alt="AI AR Follow-Up Agent" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                <Image src={`/collectivewebite/${encodeURIComponent("AI AR followup agent.png")}`} alt="AI AR Follow-Up Agent" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </AnimatedSection>
@@ -102,6 +102,30 @@ export default function AIARFollowUpAgentPage() {
             ))}
           </div>
 
+          <AnimatedSection animation="fade-up" delay={220}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Where AR automation earns its keep</h3>
+                <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
+                  Best for organizations with meaningful aged AR, payer portal fragmentation, or staffing constraints that delay status checks and follow-up documentation.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.4rem" }}>Prioritized work queues ranked by dollar value and overturn probability.</li>
+                  <li style={{ marginBottom: "0.4rem" }}>Escalations that arrive with context—not a blank task in the billing system.</li>
+                  <li>Visibility into activity volume, payer response patterns, and recovery trends.</li>
+                </ul>
+              </div>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Implementation notes</h3>
+                <ol style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Scope</strong> — define payer classes, AR segments, and escalation rules with your leadership team.</li>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Pilot</strong> — start with a bounded AR bucket to validate recovery lift and staff adoption.</li>
+                  <li><strong style={{ color: "var(--secondary-color)" }}>Scale</strong> — broaden coverage as playbooks stabilize and reporting proves ROI.</li>
+                </ol>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <AnimatedSection animation="zoom-in" delay={300}>
             <div style={{ borderRadius: "1rem", background: "linear-gradient(135deg, var(--secondary-color), #101625)", color: "white", padding: "3rem", textAlign: "center" }}>
               <h2 className="heading-2" style={{ marginBottom: "1rem" }}>Put your AR follow-up on autopilot</h2>
@@ -113,7 +137,7 @@ export default function AIARFollowUpAgentPage() {
                   Request a Demo <ArrowRight size={16} />
                 </Link>
                 <Link href="/services/collective-air" className="btn" style={{ padding: "0.9rem 1.5rem", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.3)" }}>
-                  Back to CollectiveAIR™
+                  Back to CollectiveAI™
                 </Link>
               </div>
             </div>

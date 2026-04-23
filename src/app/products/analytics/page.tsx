@@ -7,7 +7,8 @@ import Image from "next/image";
 
 export const metadata = {
     title: "Analytics - CollectiveIQ | Collective RCM",
-    description: "A cloud-based analytics platform providing real-time financial insight.",
+    description:
+        "Multi-source analytics, benchmarking, and real-time dashboards for revenue cycle and denial intelligence—including IDR analytics and CollectiveIQ RCM modules.",
 };
 
 const features = [
@@ -21,11 +22,15 @@ const iqModules = [
         icon: BarChart2,
         title: "IDR Analytics Dashboard",
         desc: "A purpose-built dashboard for Improper Denial Rate (IDR) analysis. Surfaces denial trends by payor, provider, and code so your team can identify root causes and take corrective action fast.",
+        imageSrc: `/collectivewebite/${encodeURIComponent("IDR analytics dashboard.png")}`,
+        imageAlt: "IDR analytics dashboard preview",
     },
     {
         icon: Activity,
         title: "CollectiveIQ RCM Analytics",
         desc: "Deep revenue cycle analytics layered directly on top of your billing data. Track KPIs like clean claim rate, first-pass resolution, days in AR, and collection yield — all in one unified view.",
+        imageSrc: "/collectivewebite/CollectiveIQ.png",
+        imageAlt: "CollectiveIQ RCM analytics preview",
     },
 ];
 
@@ -51,7 +56,7 @@ export default function AnalyticsPage() {
                                     </p>
                                 </div>
                                 <div>
-                                    <Image src="/service/collectiveIQ.png" alt="CollectiveIQ Analytics Dashboard" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                                    <Image src="/collectivewebite/CollectiveIQ.png" alt="CollectiveIQ Analytics dashboard" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
                                 </div>
                             </div>
                         </AnimatedSection>
@@ -69,6 +74,30 @@ export default function AnalyticsPage() {
                                 </AnimatedSection>
                             ))}
                         </div>
+
+                        <AnimatedSection animation="fade-up" delay={200}>
+                            <h2 className="heading-2" style={{ marginBottom: "1rem" }}>From reactive reporting to operational command</h2>
+                            <div style={{ display: "grid", gap: "1rem", maxWidth: "820px", marginBottom: "2rem" }}>
+                                <p className="text-body" style={{ margin: 0 }}>
+                                    Most organizations do not lack data—they lack a single place where finance, operations, and revenue integrity can agree on definitions, trends, and accountability. CollectiveIQ is built to unify operational sources in the cloud so leaders can move from monthly PDFs to daily decisions.
+                                </p>
+                                <p className="text-body" style={{ margin: 0 }}>
+                                    Whether you are managing multi-site variance, tightening denial performance, or benchmarking against peers, the goal is the same: make performance visible early enough to act—before cash is left on the table.
+                                </p>
+                            </div>
+                            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem" }}>
+                                {[
+                                    "CFO and finance teams needing consistent KPI definitions across entities.",
+                                    "RCM leaders tracking denial root cause by payer, provider, and code family.",
+                                    "Operations teams comparing locations, specialties, and workflow throughput.",
+                                    "Executives who want benchmarking without exporting sensitive data to spreadsheets.",
+                                ].map((t) => (
+                                    <div key={t} style={{ padding: "1.25rem 1.35rem", borderRadius: "0.75rem", border: "1px solid var(--border-color)", background: "#fff", fontSize: "0.95rem", lineHeight: 1.55, color: "var(--text-main)" }}>
+                                        {t}
+                                    </div>
+                                ))}
+                            </div>
+                        </AnimatedSection>
 
                         <AnimatedSection animation="fade-up" delay={300}>
                             <div id="iq-modules">
@@ -112,6 +141,9 @@ export default function AnalyticsPage() {
                                                 <p className="text-body" style={{ fontSize: "0.95rem", margin: 0 }}>
                                                     {mod.desc}
                                                 </p>
+                                                <div style={{ marginTop: "1rem", borderRadius: "0.75rem", overflow: "hidden", border: "1px solid var(--border-color)", background: "#fff" }}>
+                                                    <Image src={mod.imageSrc} alt={mod.imageAlt} width={560} height={320} style={{ width: "100%", height: "auto", display: "block" }} />
+                                                </div>
                                             </div>
                                         </AnimatedSection>
                                     ))}
@@ -119,14 +151,27 @@ export default function AnalyticsPage() {
                             </div>
                         </AnimatedSection>
 
+                        <AnimatedSection animation="fade-up" delay={360}>
+                            <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white", maxWidth: "820px" }}>
+                                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Better outcomes when analytics connects to execution</h3>
+                                <p className="text-body" style={{ fontSize: "1rem", margin: 0 }}>
+                                    Pair CollectiveIQ with{" "}
+                                    <Link href="/services/rcm" style={{ color: "var(--primary-color)", fontWeight: 600, textDecoration: "underline" }}>
+                                        Collective RCM services
+                                    </Link>{" "}
+                                    so insights translate into worked accounts, denial remediation, and measurable cash—not another dashboard your team ignores.
+                                </p>
+                            </div>
+                        </AnimatedSection>
+
                         <AnimatedSection animation="zoom-in" delay={400}>
-                            <div style={{ marginTop: "3rem", padding: "4rem", backgroundColor: "var(--background-dark)", borderRadius: "1rem", border: "1px solid var(--border-color)", textAlign: "center" }}>
-                                <h2 className="heading-2" style={{ marginBottom: "1.5rem", color: "var(--secondary-color)" }}>Request a Demo</h2>
+                            <div style={{ marginTop: "3rem", padding: "4rem", backgroundColor: "#fff", borderRadius: "1rem", border: "1px solid var(--border-color)", textAlign: "center" }}>
+                                <h2 className="heading-2" style={{ marginBottom: "1.5rem", color: "var(--secondary-color)" }}>Request a demo</h2>
                                 <p className="text-body" style={{ maxWidth: "600px", margin: "0 auto 2rem" }}>
-                                    See how CollectiveIQ can transform your healthcare organization's data today.
+                                    Walk through your data sources, reporting gaps, and the KPIs you want leadership to trust—then see how CollectiveIQ modules map to your priorities.
                                 </p>
                                 <Link href="/contact" className="btn btn-primary" style={{ padding: "1rem 2rem", fontSize: "1.125rem" }}>
-                                    Get Started <ArrowRight size={18} />
+                                    Get started <ArrowRight size={18} />
                                 </Link>
                             </div>
                         </AnimatedSection>

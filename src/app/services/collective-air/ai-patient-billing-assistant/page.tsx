@@ -5,7 +5,7 @@ import { ArrowRight, CreditCard, MessageCircle, HandCoins, ShieldCheck, Star, Ba
 import Image from "next/image";
 
 export const metadata = {
-  title: "AI Patient Billing Assistant | CollectiveAIR™",
+  title: "AI Patient Billing Assistant | CollectiveAI™",
   description:
     "A conversational AI tool that answers patient billing questions, negotiates payment plans, and processes payments — improving collections while enhancing the patient experience.",
 };
@@ -55,7 +55,7 @@ export default function AIPatientBillingAssistantPage() {
       <PageHero
         title="AI Patient Billing Assistant"
         description="A conversational billing tool that meets patients where they are — answering questions, arranging payment plans, and collecting balances without adding burden to your staff."
-        badge="CollectiveAIR™"
+        badge="CollectiveAI™"
       />
 
       <section className="section-padding">
@@ -72,7 +72,7 @@ export default function AIPatientBillingAssistantPage() {
                 </p>
               </div>
               <div>
-                <Image src="/service/collectiveIQ.png" alt="AI Patient Billing Assistant" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                <Image src="/collectivewebite/CollectiveIQ.png" alt="AI Patient Billing Assistant" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </AnimatedSection>
@@ -102,6 +102,30 @@ export default function AIPatientBillingAssistantPage() {
             ))}
           </div>
 
+          <AnimatedSection animation="fade-up" delay={220}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Patient financial engagement, upgraded</h3>
+                <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
+                  Strong fit when self-pay balances are growing, call volume is high, and patients need clearer answers and payment paths without overloading staff.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.4rem" }}>Conversational support for balances, estimates, and payment plan options.</li>
+                  <li style={{ marginBottom: "0.4rem" }}>Consistent policy explanations aligned to your organization’s rules.</li>
+                  <li>Analytics on conversion, abandonment, and common patient questions.</li>
+                </ul>
+              </div>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Guardrails we recommend</h3>
+                <ol style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Brand</strong> — tone, disclosures, and escalation paths match your patient experience standards.</li>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Controls</strong> — payment handling follows your processor and compliance requirements.</li>
+                  <li><strong style={{ color: "var(--secondary-color)" }}>Human handoff</strong> — complex accounts route cleanly to live staff with context.</li>
+                </ol>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <AnimatedSection animation="zoom-in" delay={300}>
             <div style={{ borderRadius: "1rem", background: "linear-gradient(135deg, var(--secondary-color), #101625)", color: "white", padding: "3rem", textAlign: "center" }}>
               <h2 className="heading-2" style={{ marginBottom: "1rem" }}>Transform your patient financial experience</h2>
@@ -113,7 +137,7 @@ export default function AIPatientBillingAssistantPage() {
                   Request a Demo <ArrowRight size={16} />
                 </Link>
                 <Link href="/services/collective-air" className="btn" style={{ padding: "0.9rem 1.5rem", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.3)" }}>
-                  Back to CollectiveAIR™
+                  Back to CollectiveAI™
                 </Link>
               </div>
             </div>

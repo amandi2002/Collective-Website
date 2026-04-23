@@ -5,7 +5,7 @@ import { ArrowRight, Zap, TrendingUp, BrainCircuit, FileCheck2, RotateCcw, Dolla
 import Image from "next/image";
 
 export const metadata = {
-  title: "Denial Prediction + Auto-Appeal Agent | CollectiveAIR™",
+  title: "Denial Prediction + Auto-Appeal Agent | CollectiveAI™",
   description:
     "AI that predicts which claims are at risk of denial and automatically generates and routes appeal packages to maximize first-pass recovery.",
 };
@@ -55,7 +55,7 @@ export default function DenialPredictionAutoAppealPage() {
       <PageHero
         title="Denial Prediction + Auto-Appeal Agent"
         description="Stop denials before they happen. When they do occur, let AI build and submit the appeal — automatically."
-        badge="CollectiveAIR™"
+        badge="CollectiveAI™"
       />
 
       <section className="section-padding">
@@ -72,7 +72,7 @@ export default function DenialPredictionAutoAppealPage() {
                 </p>
               </div>
               <div>
-                <Image src="/service/collectiveIQ.png" alt="Denial Prediction + Auto-Appeal Agent" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
+                <Image src={`/collectivewebite/${encodeURIComponent("denial prediction + auto appeal agent.png")}`} alt="Denial Prediction + Auto-Appeal Agent" width={680} height={460} style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </AnimatedSection>
@@ -102,6 +102,30 @@ export default function DenialPredictionAutoAppealPage() {
             ))}
           </div>
 
+          <AnimatedSection animation="fade-up" delay={220}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Two-stage defense: predict, then appeal</h3>
+                <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
+                  Strongest fit when denial rates are materially impacting cash, appeals are inconsistent, and high-risk claims are not being intercepted early enough.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.4rem" }}>Risk scoring that prioritizes review without grinding throughput to a halt.</li>
+                  <li style={{ marginBottom: "0.4rem" }}>Appeal packages aligned to payer channels and reason codes.</li>
+                  <li>Closed-loop learning as overturn outcomes feed back into scoring.</li>
+                </ul>
+              </div>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "white" }}>
+                <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Operational guardrails</h3>
+                <ol style={{ margin: 0, paddingLeft: "1.1rem", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Policy</strong> — define what can be auto-routed vs. human-approved.</li>
+                  <li style={{ marginBottom: "0.5rem" }}><strong style={{ color: "var(--secondary-color)" }}>Audit</strong> — retain rationale, attachments, and submission evidence.</li>
+                  <li><strong style={{ color: "var(--secondary-color)" }}>Govern</strong> — monthly review of high-risk cohorts and appeal performance.</li>
+                </ol>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <AnimatedSection animation="zoom-in" delay={300}>
             <div style={{ borderRadius: "1rem", background: "linear-gradient(135deg, var(--secondary-color), #101625)", color: "white", padding: "3rem", textAlign: "center" }}>
               <h2 className="heading-2" style={{ marginBottom: "1rem" }}>Start recovering denied revenue automatically</h2>
@@ -113,7 +137,7 @@ export default function DenialPredictionAutoAppealPage() {
                   Request a Demo <ArrowRight size={16} />
                 </Link>
                 <Link href="/services/collective-air" className="btn" style={{ padding: "0.9rem 1.5rem", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.3)" }}>
-                  Back to CollectiveAIR™
+                  Back to CollectiveAI™
                 </Link>
               </div>
             </div>
