@@ -104,7 +104,7 @@ export default function DenialManagementChatbotPage() {
 
           <AnimatedSection animation="fade-up" delay={220}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
-              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "#fff" }}>
                 <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Built for billing teams under pressure</h3>
                 <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
                   Ideal when denial volume is rising, payer policies are hard to keep current, and staff time is consumed by research instead of working accounts.

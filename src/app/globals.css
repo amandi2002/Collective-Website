@@ -63,6 +63,15 @@ body {
   background-color: #fff;
 }
 
+/* Service routes: solid white page shell */
+.mainContent:has(.services-route) {
+  background-color: #fff;
+}
+
+.services-route {
+  background-color: #fff;
+}
+
 footer {
   position: sticky;
   bottom: 0;

@@ -224,7 +224,7 @@ export default function CollectiveAIPage() {
                   <li>Integration-first posture with clearinghouse, EHR, and PM data flows.</li>
                 </ul>
               </div>
-              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "#fff" }}>
                 <h3 className="heading-3" style={{ fontSize: "1.35rem", marginBottom: "1rem" }}>Best results alongside disciplined operations</h3>
                 <p className="text-body" style={{ fontSize: "1rem", marginBottom: "1rem" }}>
                   AI accelerates what is already working—and exposes what is not. Organizations get the fastest lift when workflows, ownership, and KPI definitions are aligned before automation scales.

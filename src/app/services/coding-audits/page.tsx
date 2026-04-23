@@ -90,7 +90,7 @@ export default function CodingAuditsPage() {
                                             padding: "1.75rem",
                                             borderRadius: "1rem",
                                             border: "1px solid var(--border-color)",
-                                            background: "var(--background-dark)",
+                                            background: "#fff",
                                             display: "flex",
                                             flexDirection: "column",
                                             gap: "0.75rem",

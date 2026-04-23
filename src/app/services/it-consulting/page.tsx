@@ -115,7 +115,7 @@ export default function ITConsultingPage() {
 
                     <AnimatedSection animation="fade-up" delay={160}>
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
-                            <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+                            <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "#fff" }}>
                                 <h2 className="heading-2" style={{ marginBottom: "1rem", fontSize: "clamp(1.35rem, 2.5vw, 1.75rem)" }}>
                                     How engagements run
                                 </h2>

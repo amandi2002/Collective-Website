@@ -104,7 +104,7 @@ export default function AIPatientBillingAssistantPage() {
 
           <AnimatedSection animation="fade-up" delay={220}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", alignItems: "start" }}>
-              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "var(--background-dark)" }}>
+              <div style={{ padding: "2rem", borderRadius: "1rem", border: "1px solid var(--border-color)", background: "#fff" }}>
                 <h3 className="heading-3" style={{ fontSize: "1.25rem", marginBottom: "0.75rem" }}>Patient financial engagement, upgraded</h3>
                 <p className="text-body" style={{ fontSize: "0.98rem", marginBottom: "1rem" }}>
                   Strong fit when self-pay balances are growing, call volume is high, and patients need clearer answers and payment paths without overloading staff.
