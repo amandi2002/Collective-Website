@@ -2,11 +2,14 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
+    max-width: 100%;
     z-index: 50;
     background-color: transparent;
     transition: background-color var(--transition-normal), box-shadow var(--transition-normal), padding var(--transition-normal);
-    padding: 0.9rem 0;
+    /* No top padding — avoids a body-colored seam above the top bar */
+    padding: 0 0 0.9rem;
 }
 
 .topBar {
@@ -55,7 +58,7 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
-    padding: 0.45rem 0;
+    padding: 0 0 0.45rem;
 }
 
 .scrolled .topBar {
@@ -137,9 +140,9 @@
     color: white;
 }
 
-    .header:not(.scrolled) {
-        background: linear-gradient(180deg, rgba(7, 13, 30, 0.75) 0%, rgba(7, 13, 30, 0.15) 100%);
-    }
+.header:not(.scrolled) {
+    background: linear-gradient(180deg, rgba(7, 13, 30, 0.75) 0%, rgba(7, 13, 30, 0.15) 100%);
+}
 
 .mobileMenu {
     position: fixed;
